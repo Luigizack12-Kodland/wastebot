@@ -1,0 +1,38 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+
+@bot.command()
+async def ciao(ctx):
+    await ctx.send("Ciao!, chiedimi dove buttare un determinato oggetto!:")
+
+@bot.command()
+async def lattina(ctx):
+    await ctx.send("buttala nella plastica!")
+
+@bot.command()
+async def cartone(ctx):
+    await ctx.send("buttalo nella carta!")
+
+@bot.command()
+async def bicchiere(ctx):
+    await ctx.send("buttalo nel vetro!")
+
+@bot.command()
+async def cartone_di_pizza(ctx):
+    await ctx.send("buttalo nella carta!")
+
+@bot.command()
+async def fazzoletto_sporco(ctx):
+    await ctx.send("buttalo nell'umido!")
+
+@bot.command()
+async def felpa(ctx):
+    await ctx.send("No! Quella non si butta!")
+
+bot.run("MTE2Nzc2MTA3MzYwOTM4ODA0Mw.Ggi41w.TRdJeQKXTdhXmw9ISMdWkyOfoUj_TGEGXn_Cic")
